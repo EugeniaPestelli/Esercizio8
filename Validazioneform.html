@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <header>
+        <meta charset = "utf-8">
+    <meta name="author" content="Eugenia Pestelli">
+    <meta name="description" content="Questa pagina contiene un esercizio per impare a usare Attributi">
+    <meta name="viewport" content="width=device-width">
+    <head> <title>Form di registrazione</title>
+    </header>
+    </head>
+<body>
+    <h1>Form</h1>
 
+    <form name="inserimento dati" action="formregistrazione.html" method="get" enctype="multipart/form-data">
+<fieldset>
+    <legend>Dati primari</legend>
+    <span><strong>Inserisci qui i tuoi dati</strong> </span>
+    <br>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" required>
+    <br>
+    <label for="cognome">Cognome</label>
+    <input type="text" name="cognome" required>
+    <br>
+     <label for="email">Email</label>
+     <input type="email" name="email" required>
+     <br>
+    <label for="date">Data di nascita</label>
+    <input type="date" name="data di nascita">
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve contenere almeno un numero,una lettera minuscola e maiuscola e almeno 8 caratteri">
+    <br>
+    <label for="tel">Numero di telefono</label>
+    <input type="tel" name="numero di telefono" required>
+<div>
+    <h3>Vuoi aggiungere vantaggi pro?</h3>
+     <input type="radio" name="vantaggipro" value="S">SI
+    <input type="radio" name="vantaggipro" value="N">NO
+
+</div>
+   
+<br>
+<fieldset>
+    <legend>Seleziona il tuo piano tariffario</legend>
+    <select name="piano tariffario">
+    <option value="">Seleziona</option>
+    <option value="free piano">Free</option>
+    <optgroup label="3gruppo">
+    <option value ="primogruppo">10</option>
+  <option value ="secondogruppo">20</option>
+  <option value ="terzogruppo">30</option>
+
+    </optgroup>
+</select>
+</fieldset>
+<fieldset>
+    <legend>Dati carta di credito</legend>
+    <label for="numero carta">Numero carta</label>
+        <input type="text" name="numero carta" minlength="13" maxleght="18" required>
+        <br>
+        <label for="cvc">CVC</label>
+        <input type="text" name="CVC" required pattern="[0-9]{3,}" title="inserire almeno 3 numeri">
+        <br>
+        <label for="scadenza">scadenza</label>
+        <input type="date" name="scadenza della carta" required>
+</fieldset>
+<br>
+<fieldset>
+    <legend>Inserisci qui il tuo indirizzo di fatturazione</legend>
+    <label for="indirizzo"></label>
+    <input type="text" name="indirizzo fatturazione">
+</fieldset>
+<input type="submit" value="invia">
+</body>
+</form>
